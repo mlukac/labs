@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../main.css" />
+        <link rel="stylesheet" href="page.css" />
+        <!-- <link rel="serviceworker" href="serviceworker.js"> -->
+        <script type="module" src="page.js"></script>
+        <!-- <script>
+            navigator.serviceWorker.register('serviceworker.js');
+        </script> -->
+    </head>
+    <body>
+        <div id="page">
+            
+            <div class="video-container">
+                <picture>
+                    <source
+                        media="(orientation: landscape)"
+                        srcset="https://res.cloudinary.com/demo/video/upload/w_1920,h_1080,c_fill/so_0/sea_turtle.jpg">
+                    <source
+                        media="(orientation: portrait)"
+                        srcset="https://res.cloudinary.com/demo/video/upload/w_640,h_1080,c_fill/so_0/sea_turtle.jpg">
+                    <img src="https://picsum.photos/800/800" alt="Image poster" class="poster">
+                </picture>
+                    
+                <video id="myvideo"  preload="none" muted playsinline loop class="video"
+                    onclick="this.paused ? this.play() : this.pause();">
+                    <source class="" src=""
+                        data-src-portrait="https://res.cloudinary.com/demo/video/upload/w_640,h_1080,c_fill/sea_turtle.mp4"
+                        data-src-landscape="https://res.cloudinary.com/demo/video/upload/w_1920,h_1080,c_fill/sea_turtle.mp4"
+                        type="video/mp4">
+                </video>
+                <button class="open-fullscreen" onclick="window.openFullscreen(this)">Fullscreen</button>
+            </div>
+                
+            <script>
+
+
+                // document.querySelector(".js-fullscreen").addEventListener("click", (e) => {
+                //     var elem = this.previousElementSibling;
+                //     if (elem.requestFullscreen) {
+                //         elem.requestFullscreen();
+                //     } else if (elem.webkitRequestFullscreen) { /* Safari */
+                //         elem.webkitRequestFullscreen();
+                //     }
+                //     console.log("testBLA");
+                // });
+
+                // var elem = document.getElementById("myvideo");
+                // function openFullscreen() {
+                //     if (elem.requestFullscreen) {
+                //     elem.requestFullscreen();
+                //     } else if (elem.webkitRequestFullscreen) { /* Safari */
+                //     elem.webkitRequestFullscreen();
+                //     } else if (elem.msRequestFullscreen) { /* IE11 */
+                //     elem.msRequestFullscreen();
+                //     }
+                // }
+
+                // var box = document.querySelector(".box");
+                
+                // box.nextElementSibling;
+                // box.previousElementSibling;
+                // box.parentElement;
+            </script>
+
+            <div class="video-container">
+                <picture>
+                    <source
+                        media="(orientation: landscape)"
+                        srcset="https://res.cloudinary.com/jgl-ltd/video/upload/so_0.0/v1642245033/culture_v12_gyekhcibbb.jpg">
+                    <source
+                        media="(orientation: portrait)"
+                        srcset="https://i.postimg.cc/bpB6jJMd/image-1.png">
+                    <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+                </picture>
+                    
+                <video preload="none" muted playsinline loop class="video"
+                    onclick="this.paused ? this.play() : this.pause();">
+                    <source class="" src="" width="200px" height="500px"
+                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
+                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+    
+            <div class="video-container">
+                <picture>
+                    <source
+                        media="(orientation: landscape)"
+                        srcset="https://res.cloudinary.com/jgl-ltd/video/upload/so_0.0/v1642245033/culture_v12_gyekhcibbb.jpg">
+                    <source
+                        media="(orientation: portrait)"
+                        srcset="https://i.postimg.cc/jszvNhjJ/image-2.png">
+                    <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+                </picture>
+                <video preload="none" muted playsinline loop class="video"
+                    onclick="this.paused ? this.play() : this.pause();">
+                    <source class="" src="" width="200px" height="500px"
+                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4"
+                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+    
+            <div class="video-container">
+                <picture>
+                    <source
+                        media="(orientation: landscape)"
+                        srcset="https://res.cloudinary.com/jgl-ltd/video/upload/so_0.0/v1642245033/culture_v12_gyekhcibbb.jpg">
+                    <source
+                        media="(orientation: portrait)"
+                        srcset="https://i.postimg.cc/sjsmJZBH/image-3.png">
+                    <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+                </picture>
+                <video preload="none" muted playsinline loop class="video"
+                    onclick="this.paused ? this.play() : this.pause();">
+                    <source class="" src="" width="200px" height="500px"
+                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-womans-feet-splashing-in-the-pool-1261-large.mp4"
+                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </body>
+</html>    
+

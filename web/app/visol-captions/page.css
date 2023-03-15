@@ -1,0 +1,24 @@
+.video-background video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+#lyrics.active {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    /* background-color: #000; */
+    color: #8bc541;
+    font-size: clamp(1rem, 3vw, 3rem);
+    text-align:center;
+    font-weight: bold;
+}
+#lyrics.active {
+    display: block;
+}

@@ -1,0 +1,90 @@
+{# content \Netgen\EzPlatformSiteApi\API\Values\Content #}
+{# location \Netgen\EzPlatformSiteApi\API\Values\Location #}
+
+{% import '@ibexadesign/parts/content_field_macros.html.twig' as content_fields %}
+
+{% block content %}
+    <article class="view-type view-type-{{ view_type }} mdx-cta-lead-banner vl18">
+        <div class="container">
+
+            {% if content.fieldValue('image') is not empty %}
+                {{ content_fields.image(content, null, 'i1200') }}
+            {% endif %}
+
+            <div class="row justify-space-between">
+                <div class="col-md-7">
+                    {% if content.hasField('title') and not content.fields.title.empty %}
+                        <h2 class="title">
+                            {{ ng_render_field(content.fields.title) }}
+                        </h2>
+                    {% endif %}
+
+                    {% if content.hasField('short_description') and not content.fields.short_description.empty %}
+                        <div class="short">
+                            {{ ng_render_field(content.fields.short_description) }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-5 d-flex align-items-md-end justify-content-md-end mt-4 mt-md-0">
+                    {% set form = content.fieldRelation('form') %}
+
+                    {% if form is not empty %}
+                        <a href="#"
+                           class="form-modal-trigger button button--white button--icon button--arrow-right"
+                           data-url="{{ path('app_collect_info_modal', {formLocationId: form.mainLocation.id, refererLocationId: location.id}) }}">
+                            {% if content.hasField('link_label') and not content.fields.link_label.empty %}
+                                {{ ng_render_field(content.fields.link_label) }}
+                            {% else %}
+                                {{ form.name }}
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    {% if content.fields.show_as_flyout.value.bool is same as(true) %}
+        <div class="flyout-wrapper">
+            <div class="flyout" data-name="DataName" data-category="DataCategory" data-type="DataType">
+                <div class="flyout-head">
+                    <a href="#" class="remove"></a>
+                </div>
+                <div class="flyout-body">
+
+                    <article class="view-type view-type-{{ view_type }} mdx-cta-lead-banner vl18-flyout">
+                        {% if content.hasField('flyout_image') and not content.fields.flyout_image.empty %}
+                            <div class="image">
+                                {{ ng_render_field(content.fields.flyout_image, {'parameters': {'alias':'i770'}}) }}
+                            </div>
+                        {% endif %}
+
+                        <div class="content">
+                            {% if content.hasField('flyout_title') and not content.fields.flyout_title.empty %}
+                                <h2 class="title">
+                                    {{ ng_render_field(content.fields.flyout_title) }}
+                                </h2>
+                            {% endif %}
+
+                            {% set form = content.fieldRelation('form') %}
+                            {% if form is not empty %}
+                                <a href="#"
+                                    class="flyout-modal-trigger form-modal-trigger flyout-action button button--green button--icon button--arrow-right"
+                                    data-url="{{ path('app_collect_info_modal', {formLocationId: form.mainLocation.id, refererLocationId: location.id}) }}">
+                                    {% if content.hasField('flyout_link_label') and not content.fields.flyout_link_label.empty %}
+                                        {{ ng_render_field(content.fields.flyout_link_label) }}
+                                    {% else %}
+                                        {{ form.name }}
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+                        </div>
+
+                    </article>
+                    
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    
+{% endblock %}

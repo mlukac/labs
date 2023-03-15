@@ -1,0 +1,72 @@
+/* setup */
+html,
+body {
+  height: 100%;
+}
+
+
+.wrapper {
+  /* scroll-snap parent properties */
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y proximity; */
+  /* scroll-padding-block: 1rem; */
+
+  overflow: auto;
+  height: 100%;
+  counter-reset: div;
+}
+
+.wrapper > div {
+  /* scroll-snap child properties */
+  scroll-snap-align: start;
+  /* scroll-snap-stop: normal; */
+  /* scroll-margin-block: 1rem; */
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 128px;
+  /* min-height: 66vh; */
+  height: 100%;
+  width: 100vw;
+  overflow: scroll;
+
+  
+}
+.wrapper > div > div {
+    height: 100%;
+    position: relative;
+}
+.wrapper > div > div:after {
+    counter-increment: div;
+    content: counter(div);
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    left: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 100px;
+    color: green;
+    text-align: center;
+}
+.wrapper > div > div > img {
+    display: block;
+    height: 100%;
+    max-width: none;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+/* coloration */
+/* .wrapper > div:nth-child(even) {
+  background-color: #87ea87;
+}
+.wrapper > div:nth-child(odd) {
+  background-color: #87ccea;
+} */

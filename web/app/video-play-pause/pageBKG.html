@@ -1,0 +1,201 @@
+<style>
+    body {
+        margin: 0;
+        background-color: grey;
+        padding-top: 90vh;
+    }
+    .poster-container {
+        position: relative;
+        margin: 50px;
+        max-width: 1600px;
+    }
+
+    .poster {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0.35;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        visibility: hidden;
+    }
+</style>
+
+<div class="poster-container">
+    <picture>
+        <source
+            media="(orientation: landscape)"
+            srcset="https://picsum.photos/1600/900">
+        <source
+            media="(orientation: portrait)"
+            srcset="https://i.postimg.cc/bpB6jJMd/image-1.png">
+        <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+    </picture>
+        
+    <video preload="none" muted playsinline loop class="video"
+        onclick="this.paused ? this.play() : this.pause();">
+        <source class="" src="" width="200px" height="500px"
+            data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
+            data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+            type="video/mp4">
+    </video>
+</div>
+
+<div class="poster-container">
+    <picture>
+        <source
+            media="(orientation: landscape)"
+            srcset="https://picsum.photos/1600/900">
+        <source
+            media="(orientation: portrait)"
+            srcset="https://i.postimg.cc/jszvNhjJ/image-2.png">
+        <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+    </picture>
+    <video preload="none" muted playsinline loop class="video"
+        onclick="this.paused ? this.play() : this.pause();">
+        <source class="" src="" width="200px" height="500px"
+            data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4"
+            data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+            type="video/mp4">
+    </video>
+</div>
+
+<div class="poster-container">
+    <picture>
+        <source
+            media="(orientation: landscape)"
+            srcset="https://picsum.photos/1600/900">
+        <source
+            media="(orientation: portrait)"
+            srcset="https://i.postimg.cc/sjsmJZBH/image-3.png">
+        <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
+    </picture>
+    <video preload="none" muted playsinline loop class="video"
+        onclick="this.paused ? this.play() : this.pause();">
+        <source class="" src="" width="200px" height="500px"
+            data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-womans-feet-splashing-in-the-pool-1261-large.mp4"
+            data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
+            type="video/mp4">
+    </video>
+</div>
+
+<script>
+
+    function loadVideo(video) {
+        var sources = video.querySelectorAll('source');
+        var isLoaded = video.hasAttribute('data-loaded');
+
+        if (!isLoaded) {
+            var orientation = getScreenOrientation();
+            var selectedSource = null;
+
+            sources.forEach(function(source) {
+                var src1 = source.getAttribute('data-src-portrait');
+                var src2 = source.getAttribute('data-src-landscape');
+                var type = source.getAttribute('type');
+
+                if (src1 && src2 && type) {
+                    if (orientation === 'landscape' && type.indexOf('mp4') > -1) {
+                        selectedSource = src2;
+                    } else if (orientation === 'portrait' && type.indexOf('mp4') > -1) {
+                        selectedSource = src1;
+                    }
+                }
+            });
+
+            if (selectedSource) {
+                sources.forEach(function(source) {
+                    source.removeAttribute('src');
+                    source.setAttribute('src', selectedSource);
+                });
+
+                video.load();
+                video.setAttribute('data-loaded', 'true');
+            }
+        }
+    }
+
+    function playVideo(video) {
+        if (video.readyState >= 2) {
+            video.play();
+        } else {
+            video.addEventListener('canplay', function() {
+                var promise = video.play();
+                if (promise !== undefined) {
+                    promise.catch(error => {
+                        console.log("Play prevented, click to play");
+                        // Show a UI element to let the user manually start playback
+                    }).then(() => {
+                        console.log("Play started");
+                    });
+                }
+            });
+        }
+    }
+
+    function pauseVideo(video) {
+        video.pause();
+    }
+
+    function getScreenOrientation() {
+        var orientation = 'portrait';
+        if (window.matchMedia('(orientation: landscape)').matches) {
+            orientation = 'landscape';
+        }
+        return orientation;
+    }
+
+    let currentVideo = null;
+    function handleIntersection(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var video = entry.target;
+                var source = video.querySelector('source');
+                var isLoaded = video.hasAttribute('data-loaded');
+                if (!isLoaded) {
+                    loadVideo(video, source);
+                    video.setAttribute('data-loaded', 'true');
+                }
+                if (currentVideo && currentVideo !== video) {
+                    pauseVideo(currentVideo);
+                }
+                currentVideo = video;
+
+                video.style.visibility = 'visible';
+                playVideo(video);
+            } else {
+                pauseVideo(entry.target);
+            }
+        });
+    }
+
+    var options = {
+        // root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+    var observer = new IntersectionObserver(handleIntersection, options);
+
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
+        observer.observe(video);
+    });
+
+    window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
+        var videos = document.querySelectorAll('video');
+        var sources = document.querySelectorAll('source');
+        videos.forEach(function(video) {
+            video.removeAttribute('data-loaded');
+            video.style.visibility = 'hidden';
+            observer.observe(video);
+        });
+    });
+
+</script>

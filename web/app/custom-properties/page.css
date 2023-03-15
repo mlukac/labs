@@ -1,0 +1,68 @@
+:root {
+    --my-scroll-top: 0;
+    --my-window-width: 0;
+    --my-window-height: 0;
+    --myprop1: 0;
+    --myprop2: 0;
+    --myprop3: 0;
+}
+body {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+h1 {
+    font-size: 10rem;
+}
+p {
+    font-size: 3rem;
+}
+
+.block {
+    text-align: center;
+}
+#block-0 {
+    background-color: #2970ef;
+}
+#block-0 h1 {
+    transform: translateX(calc( -1 * var(--myprop2)));
+    font-size: 75vh;
+    line-height: 100vh;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    padding: 0 100vw;
+    margin: 0;
+    z-index: 0;
+    /* background-image: url("wide1.jpg"); */
+    /* background-image: url("wide2.jpg"); */
+    background-image: linear-gradient(#fff, #9879e2);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#block-1 {
+    display: flex;
+    flex-direction: row;
+}
+#block-1 h1 {
+    transform: rotate(calc( 0.25 * var(--myprop1)));
+}
+#block-1 p {
+    transform: rotate(calc( -0.25 * var(--myprop1) ));
+}
+
+#block-2 p {
+    font-size: 3rem;
+    transform: scale(calc( sin( calc( 0.5 * var(--myprop1))) + 2 ));
+}
+
+#block-3 h1 {
+    transform: scale(calc( 0.0002 * var(--myprop3))) skew(calc( 0.2 * var(--myprop1)));
+}
+#block-3 p {
+    transform: scale(calc( 0.0002 * var(--myprop3))) skew(calc( -0.2 * var(--myprop1)));;
+}

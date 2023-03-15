@@ -1,0 +1,43 @@
+html,
+body {
+  height:100%;
+}
+
+body {
+  width:100%;
+}
+
+.header {
+  color: white;
+  font-size: 50px;
+}
+
+.section {
+  height: 50%;
+  background: #293744;
+  color: #899eb5;
+}
+
+.scene {
+  height: 100%;
+  width: 100%;
+  background: #EAEAEA;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.viewer {
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(https://roguemotion.graphics/images/SharkSprite_atlas_NP_1.jpg);
+  background-size: 8192px 8192px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}

@@ -1,0 +1,33 @@
+.header-outer {
+    align-items: center;
+    background: white;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* set the height for the header at its max height you want */
+    height: 200px;
+    left: 0;
+    position: sticky;
+    /** set the value of `top` with the difference between
+    * the height of the outer and inner container to compensate
+    * for this */
+    top: -120px;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-inner {
+    align-items: center;
+    background: white;
+    display: flex;
+    /** specify the height of the header that you want when scrolling 
+    *The difference between this height and the height of the outer header
+    *is the value of the `top` of the outer container */
+    height: 80px;
+    justify-content: space-around;
+    left: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+  

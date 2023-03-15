@@ -1,0 +1,49 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.block {
+    background-color: #fff!important;
+    padding-inline: 15vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+h1, p {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-block: 0.5em;
+}
+h1 {
+    font-size: clamp(3rem, 7vw, 10rem);
+    letter-spacing: -0.06em;
+}
+p {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    max-width: 52ch;
+}
+#block-1 {
+    flex-direction: row;
+    text-align: left;
+}
+#block-1 h1 {
+    background-image: radial-gradient(circle at left, #8bc541, #26aae1);
+    text-align: left;
+    width: min-content;
+}
+#block-1 p {
+    background-image: radial-gradient(circle at left, #8bc541, #26aae1);
+}
+#block-2 {
+    flex-direction: column;
+    text-align: center;
+}
+#block-2 h1 {
+    background-image: radial-gradient(circle at top, #8bc541, #26aae1);
+}
+#block-2 p {
+    background-image: radial-gradient(circle at top, #8bc541, #26aae1);
+    margin-inline: auto;
+    
+}

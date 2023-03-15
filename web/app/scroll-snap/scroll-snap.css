@@ -1,0 +1,36 @@
+/* setup */
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  /* scroll-snap parent properties */
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y proximity; */
+  /* scroll-padding-block: 1rem; */
+
+  overflow: auto;
+  height: 100%;
+}
+
+.wrapper > div {
+  /* scroll-snap child properties */
+  scroll-snap-align: start;
+  /* scroll-snap-stop: normal; */
+  /* scroll-margin-block: 1rem; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 128px;
+  min-height: 66vh;
+}
+
+/* coloration */
+.wrapper > div:nth-child(even) {
+  background-color: #87ea87;
+}
+.wrapper > div:nth-child(odd) {
+  background-color: #87ccea;
+}
