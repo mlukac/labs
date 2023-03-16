@@ -1,5 +1,16 @@
 :root {
     --sidebarScrollTop: 0;
+
+    --hue: 0;
+    --saturation: 0%;
+    --light: 50%;
+
+    /* --hue: 180;
+    --saturation: 50%; */
+
+    --sidebarColor: hsl( var(--hue), var(--saturation), var(--light) );
+    --sidebarColorLighten: hsl(var(--hue), var(--saturation), calc(var(--light) + 5%));
+    --sidebarColorDarken: hsl(var(--hue), var(--saturation), calc(var(--light) - 15%));
 }
 
 *, ::after, ::before {
@@ -39,7 +50,7 @@ h1 {
     width: 30px;
     height: 100dvh;
     background-color: white;
-    color: #000;
+    color: var(--sidebarColor);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
     position: fixed;
     top: 0;
@@ -83,7 +94,7 @@ h1 {
 #sidebar:hover .logo {
     width: 66px;
     /* background: linear-gradient(270deg, #888 0%, #fff 75%); */
-    background: linear-gradient(270deg, #888 0%, #fff calc( sin(var(--sidebarScrollTop)) * 100% ) );
+    background: linear-gradient(270deg, var(--sidebarColor) 0%, #fff calc( sin(var(--sidebarScrollTop)) * 100% ) );
 }
 #sidebar h2 {
     font-size: 72px;
@@ -104,7 +115,7 @@ h1 {
 }
 #sidebar:hover h2 {
     transform: perspective(100px) rotateY(0deg);
-    background: linear-gradient(90deg, #000 0%, #fff 66%);
+    background: linear-gradient(90deg, var(--sidebarColor) 0%, #fff 75%);
     background-clip: border-box;
     background-clip: text;
     -webkit-background-clip: text;
@@ -119,11 +130,17 @@ h1 {
     padding-left: 24px;
 }
 #sidebar .wrapper li::marker {
-    color: #888;
+    color: var(--sidebarColor);
     content: "► ";
 }
 #sidebar .wrapper span {
-    color: #888;
+    color: var(--sidebarColorLighten);
+}
+#sidebar a:link {
+    color: var(--sidebarColorDarken);
+}
+#sidebar a:visited {
+    color: var(--sidebarColorLighten);
 }
 #sidebar:hover .wrapper ul {
    
