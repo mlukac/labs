@@ -6,7 +6,7 @@ body {
     background-color: whitesmoke;
     position: relative;
     margin: 0;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 img {
     max-width: 100%;
@@ -30,20 +30,30 @@ h1 {
     
 }
 #sidebar {
-    font-family: monospace;
+    font-family: inherit;
     font-size: 16px;
-    width: 50px;
-    height: 100vh;
-    padding: 20px 0;
+    width: 30px;
+    height: 100dvh;
     background-color: white;
     color: #000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    bottom: 0;
+    z-index: 10000;
     overflow-y: scroll;
-    transition: all 0.3s ease;
+    overflow-x: hidden;
+    transition: all 0.2s ease;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#sidebar::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#sidebar  {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 #sidebar:hover {
     width: 300px;
@@ -51,29 +61,67 @@ h1 {
 #sidebar .wrapper {
     width: 300px;
     padding: 0 5px;
-    min-height: calc(100vh - 40px);
+    min-height: calc(100dvh - 40px);
+    opacity: 0;
+    transition: all .2s ease;
 }
-#sidebar .wrapper h2 {
+#sidebar:hover .wrapper {
+    opacity: 1;
+}
+#sidebar .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 30px;
+    z-index: 1;
+}
+#sidebar:hover .logo {
+    width: 66px;
+    background: linear-gradient(270deg, #888 0%, #fff 75%);
+}
+#sidebar h2 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -3px;
     color: inherit;
     margin: 0;
-    letter-spacing: 5px;
-    line-height: 1;
     text-orientation: upright;
     writing-mode: vertical-rl;
+    transform: perspective(100px) rotateY(45deg);
+    transform-origin: left;
+    transition: all .2s ease;
+    position: relative;
+    left: -4px;
+    top: 5px;
 }
-#sidebar:hover .wrapper h2 {
-    writing-mode: initial;
-    letter-spacing: 2px;
+#sidebar:hover h2 {
+    transform: perspective(100px) rotateY(0deg);
+    background: linear-gradient(90deg, #000 0%, #fff 75%);
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 #sidebar .wrapper ul {
-    padding-left: 32px;
-    opacity: 0;
+    padding-left: 78px;
+    
+    
+}
+#sidebar .wrapper ul ul {
+    padding-left: 24px;
+}
+#sidebar .wrapper li::marker {
+    color: #888;
+    content: "► ";
 }
 #sidebar .wrapper span {
     color: #888;
 }
 #sidebar:hover .wrapper ul {
-    opacity: 1;
+   
+    
 }
 @media only screen and (max-width: 767px) {
     #sidebar {

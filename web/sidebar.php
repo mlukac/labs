@@ -1,8 +1,9 @@
 <div id="sidebar">
+    <div class="logo"><h2>MLABS</h2></div>
     <div class="wrapper">
-        <h2>MLABS</h2>
+        
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/">home</a></li>
         </ul>
         <ul>
             <li><a href="/app/custom-properties">custom-properties</a></li>
@@ -40,7 +41,7 @@
             <li><a href="/app/touchadriatic-test">touchadriatic-test</a></li>
             <li><a href="/app/video-play-pause">video-play-pause</a></li>
             <li>
-                <span>VizolS</span>
+                <span>vizols</span>
                 <ul>
                     <li><a href="/app/visol-blur/">visol-blur</a></li>
                     <li><a href="/app/visol-blur/v2.php">visol-blur v2</a></li>
