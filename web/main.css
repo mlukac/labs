@@ -1,3 +1,7 @@
+:root {
+    --sidebarScrollTop: 0;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -78,7 +82,8 @@ h1 {
 }
 #sidebar:hover .logo {
     width: 66px;
-    background: linear-gradient(270deg, #888 0%, #fff 75%);
+    /* background: linear-gradient(270deg, #888 0%, #fff 75%); */
+    background: linear-gradient(270deg, #888 0%, #fff calc( sin(var(--sidebarScrollTop)) * 100% ) );
 }
 #sidebar h2 {
     font-size: 72px;
@@ -95,10 +100,11 @@ h1 {
     position: relative;
     left: -4px;
     top: 5px;
+    user-select: none;
 }
 #sidebar:hover h2 {
     transform: perspective(100px) rotateY(0deg);
-    background: linear-gradient(90deg, #000 0%, #fff 75%);
+    background: linear-gradient(90deg, #000 0%, #fff 66%);
     background-clip: border-box;
     background-clip: text;
     -webkit-background-clip: text;
