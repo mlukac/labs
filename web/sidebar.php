@@ -7,6 +7,13 @@
         </ul>
         <ul>
             <li><a href="/app/custom-properties">custom-properties</a></li>
+            <li>
+                <span>card-glow</span>
+                <ul>
+                    <li><a href="/app/card-glow/card-glow-1">card-glow-1</a></li>
+                    <li><a href="/app/card-glow/card-glow-2">card-glow-2</a></li>
+                </ul>
+            </li>
             <li><a href="/app/details-summary">details-summary</a></li>
             <li><a href="/app/flyout">flyout</a></li>
             <li><a href="/app/grid-hover">grid-hover</a></li>
