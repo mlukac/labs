@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../main.css" />
+        <?php include "../../head.php" ?>
         <link rel="stylesheet" href="scroll-snap.css" />
     </head>
     <body>

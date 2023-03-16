@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../main.css" />
+        <?php include "../../head.php" ?>
         <link rel="stylesheet" href="page.css" />
         <script type="module" src="page.js"></script>
     </head>
