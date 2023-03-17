@@ -45,6 +45,13 @@
                 </ul>
             </li>
             <li><a href="/app/sticky-resizable-header">sticky-resizable-header</a></li>
+            <li>
+                <span>text-gradients</span>
+                <ul>
+                    <li><a href="/app/text-glow-1">text-glow-1</a></li>
+                    <li><a href="/app/text-glow-2">text-glow-2</a></li>
+                </ul>
+            </li>
             <li><a href="/app/touchadriatic-test">touchadriatic-test</a></li>
             <li><a href="/app/video-play-pause">video-play-pause</a></li>
             <li>

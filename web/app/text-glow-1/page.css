@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.text-1 {
+  --color-one: #E0FCFF;
+  --color-two: #00B6C7;
+}
+.text-2 {
+  --color-one: #E0FCFF;
+  --color-two: #fff;
+}
+.text-3 {
+  --color-one: #000;
+  --color-two: #fff;
+}
+
+
+.text {
+  --bg-size: 400%;
+  
+  font-family: sans-serif;
+  font-size: clamp(3rem, 10vw, 15rem);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .text {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}
+  
