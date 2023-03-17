@@ -35,7 +35,7 @@ body {
     )
     0 0 / var(--bg-size) 100%;
   color: transparent;
-  -webkit-sbackground-clip: text;
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
