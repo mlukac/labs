@@ -50,6 +50,7 @@
                 <ul>
                     <li><a href="/app/text-glow-1">text-glow-1</a></li>
                     <li><a href="/app/text-glow-2">text-glow-2</a></li>
+                    <li><a href="/app/text-shine-1">text-shine-1</a></li>
                 </ul>
             </li>
             <li><a href="/app/touchadriatic-test">touchadriatic-test</a></li>
