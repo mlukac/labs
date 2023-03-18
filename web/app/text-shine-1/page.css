@@ -16,7 +16,7 @@ body {
     background: linear-gradient(90deg, #fff 25%, transparent 50%, #fff 75%);
   }
   .text-3 {
-    background: linear-gradient(90deg, #fff 0%, #fff 12.5%, #00B6C7 40%, #42EFFF 50%, transparent 60%, transparent 100%);
+    background: linear-gradient(90deg, #fff 0%, #fff 12.5%, #00B6C7 25%, #233334 45%, #42EFFF 50%, #233334 55%, #00B6C7 70%, transparent 75%, transparent 100%);
   }
   
   .text {
@@ -29,7 +29,7 @@ body {
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: 400%;
-    animation: animate 3s linear 2;
+    animation: animate 3s linear 1;
     animation-fill-mode: forwards;
     animation-direction: reverse;
     -webkit-background-clip: text;
