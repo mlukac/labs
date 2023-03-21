@@ -67,6 +67,12 @@
                     <li><a href="/app/visol-video/eye.php">visol-video eye</a></li>
                 </ul>
             </li>
+            <li>
+                <span>animation3d</span>
+                <ul>
+                    <li><a href="/app/animation3d-1">animations3d-1</a> - <a target="_blank" href="https://codepen.io/amit_sheen/pen/NWLXXdp">(cpen)</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
