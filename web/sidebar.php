@@ -80,6 +80,7 @@
                 </ul>
             </li>
             <li><a href="/app/grid3d">grid3d</a></li>
+            <li><a href="/app/orbiting-icons">orbiting-icons</a></li>
             <li><a href="/app/testpage">testpage</a></li>
         </ul>
     </div>
