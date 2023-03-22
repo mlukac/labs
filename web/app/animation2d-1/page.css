@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: radial-gradient(circle, #333, #000 400px);
+}
+
+.sqr {
+  rotate: 0deg;
+  transition: rotate 1s ease-out;
+}
+
+.sqr:hover {
+  rotate: -360deg;
+}
+
+.sqr {
+  width: 200px;
+  height: 200px;
+  background: green;
+  cursor: pointer;
+  -webkit-animation: rotate 0.5s infinite linear paused;
+          animation: rotate 0.5s infinite linear paused;
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sqr:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
