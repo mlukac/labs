@@ -81,7 +81,6 @@
             </li>
             <li><a href="/app/grid3d">grid3d</a></li>
             <li><a href="/app/orbiting-icons">orbiting-icons</a></li>
-            <li><a href="/app/testpage">testpage</a></li>
         </ul>
     </div>
 </div>
@@ -93,24 +92,35 @@
       height: 100vh;
       overflow-x: scroll;
     }
-    
-    .frames-container {
-      white-space: nowrap;
-      height: 100%;
-    }
-
-    .column {
-      width: 360px;
-      height: 100%;
-      display: inline-block;
-      box-sizing: border-box;
-    }
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
+    .frames-container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    .frames-container .column {
+        border: none;
+        transform-origin: left top;
+    }
+
+    .frames-container .column { width: 360px; height: 100vh; transform: scale(1); }
+    .frames-container iframe {  width: 360px; }
+
+    /* .frames-container .column { width: 180px; height: 200vh; transform: scale(0.5); }
+    .frames-container iframe {  width: 360px; } */
+
+    /* .frames-container .column { width: 360px; height: 200vh; transform: scale(0.5); }
+    .frames-container iframe {  width: 720px; } */
+
+    /* .frames-container .column { width: 720px; height: 200vh; transform: scale(0.5); }
+    .frames-container iframe {  width: 1440px; } */
 
     #floating-button {
       display: none;
@@ -178,7 +188,14 @@
       <h2>Add or Clear URLs</h2>
       <button class="add">Add URL to List</button>
       <button class="clear">Clear URLs</button>
+      
+      <!-- <button onclick="readData()">Read Data from LocalStorage</button> -->
+      <!-- <button onclick="writeData()">Write Data to LocalStorage</button> -->
+
       <div id="url-list"></div>
+      <br/>
+      <button class="add" onclick="location.href='/toolbar-testpage.php'" type="button">Show URLs</button>
+
     </div>
   </div>
 
@@ -237,6 +254,7 @@
       var column = document.createElement('div');
       column.classList.add('column');
       var iframe = document.createElement('iframe');
+      iframe.classList.add('iframe');
       iframe.src = url;
       column.appendChild(iframe);
       container.appendChild(column);
@@ -253,24 +271,69 @@
 
 
     
-
+    // dragable floating button
     const toggleButton = document.getElementById('floating-button');
     let isDragging = false;
-
     toggleButton.addEventListener('mousedown', (event) => {
-    isDragging = true;
+        isDragging = true;
     });
-
     document.addEventListener('mouseup', (event) => {
-    isDragging = false;
+        isDragging = false;
+    });
+    document.addEventListener('mousemove', (event) => {
+        if (isDragging) {
+            toggleButton.style.top = `${event.clientY}px`;
+            toggleButton.style.left = `${event.clientX}px`;
+        }
     });
 
-    document.addEventListener('mousemove', (event) => {
-    if (isDragging) {
-        toggleButton.style.top = `${event.clientY}px`;
-        toggleButton.style.left = `${event.clientX}px`;
-    }
+
+    // sync scroll on all iframes
+    const iframes = document.querySelectorAll('.iframe');
+    iframes.forEach(iframe => {  
+        iframe.contentWindow.addEventListener('scroll', () => {
+            const scrollPosition = iframe.contentWindow.pageYOffset; 
+            
+            // Update the scroll position of the other iframes
+            iframes.forEach(otherIframe => {
+                if (otherIframe !== iframe) {
+                    otherIframe.contentWindow.scrollTo(0, scrollPosition);
+                }
+            });
+        });
     });
+
+
+    // read and write to project testing
+    function readData() {
+        const data = JSON.parse(localStorage.getItem('urls'));
+        console.log(data);
+        return data;
+    }
+    function writeData() {
+        const data = { name: "John Wickerest", email: "john@example.com" };
+        // const data = readData();
+
+        fetch('/toolbar-data.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Data written to file');
+        })
+        .catch((error) => {
+            // console.error('Error:', error);
+        });
+    }
+    // function writeData() {
+    //     const data = ['url1', 'url2', 'url3'];
+    //     localStorage.setItem('data', JSON.stringify(data));
+    //     console.log('Data written to localStorage');
+    // }
 
   </script>
 
