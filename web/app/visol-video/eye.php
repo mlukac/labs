@@ -8,7 +8,7 @@
         <script type="module" src="page.js"></script>
     </head>
     <body>
-        <!-- <?php include "../../sidebar.php" ?> -->
+        <?php include "../../sidebar.php" ?>
 
         <div id="page">
             <?php include "./eye.html" ?>

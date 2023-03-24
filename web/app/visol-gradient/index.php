@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <!-- <?php include "../../sidebar.php" ?> -->
+        <?php include "../../sidebar.php" ?>
 
         <div id="">
             <?php include "./page.html" ?>

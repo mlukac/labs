@@ -77,6 +77,7 @@
                 <span>animation3d</span>
                 <ul>
                     <li><a href="/app/animation3d-1">animations3d-1</a> - <a target="_blank" href="https://codepen.io/amit_sheen/pen/NWLXXdp">(cpen)</a></li>
+                    <li><a href="/app/animation3d-2">animations3d-2</a> - <a target="_blank" href="https://codepen.io/ivorjetski/pen/JjYOvvP">(cpen)</a></li>
                 </ul>
             </li>
             <li><a href="/app/grid3d">grid3d</a></li>
