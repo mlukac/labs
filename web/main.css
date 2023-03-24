@@ -1,3 +1,5 @@
+/* general styles */
+
 :root {
     --sidebarScrollTop: 0;
 
@@ -44,6 +46,11 @@ h1 {
 #block-1 {
     
 }
+
+
+
+
+/* sidebar left -------------------------------- */
 #sidebar {
     font-family: inherit;
     font-size: 16px;
@@ -156,4 +163,73 @@ h1 {
     #sidebar .wrapper ul {
         font-size: 20px;
     }
+}
+
+
+
+
+
+
+/* sidebar right -------------------------------- */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: scroll;
+} */
+#floating-button {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 56px;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+}
+@media screen and (min-width: 361px) {
+    #floating-button {
+        display: block;
+    }
+}
+#sidebar-right {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: right 0.5s;
+    z-index: 999;
+    color: black;
+}
+#sidebar-right.open {
+    right: 0;
+}
+#sidebar-right .sidebar-content {
+    padding: 20px;
+}
+#sidebar-right button, #sidebar-right a.btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+#sidebar-right button.clear {
+    background-color: #dc3545;
 }

@@ -2,7 +2,7 @@
 <html>
     <head>
         <?php include "head.php" ?>
-        <link rel="stylesheet" href="page.css" />
+        <!-- <link rel="stylesheet" href="page.css" /> -->
         <!-- <script type="module" src="page.js"></script> -->
         <style>
             iframe {
@@ -38,23 +38,6 @@
         <div class="frames-container"></div>
 
         <?php include "sidebar.php" ?>
-
-        <script>
-            // sync scroll on all iframes
-            const iframes = document.querySelectorAll('.iframe');
-            iframes.forEach(iframe => {  
-                iframe.contentWindow.addEventListener('scroll', () => {
-                    const scrollPosition = iframe.contentWindow.pageYOffset; 
-                    
-                    // Update the scroll position of the other iframes
-                    iframes.forEach(otherIframe => {
-                        if (otherIframe !== iframe) {
-                            otherIframe.contentWindow.scrollTo(0, scrollPosition);
-                        }
-                    });
-                });
-            });
-        </script>
 
     </body>
 </html>    
