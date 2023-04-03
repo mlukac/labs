@@ -1,7 +1,7 @@
 <div id="sidebar">
     <div class="logo"><h2>MLABS</h2></div>
     <div class="wrapper">
-        
+
         <ul>
             <li><a href="/">home</a></li>
         </ul>
@@ -82,6 +82,7 @@
             </li>
             <li><a href="/app/grid3d">grid3d</a></li>
             <li><a href="/app/orbiting-icons">orbiting-icons</a></li>
+            <li><a href="/app/borders-1">borders-1</a></li>
         </ul>
     </div>
 </div>
@@ -95,7 +96,7 @@
         <h2>Add or Clear URLs</h2>
         <button class="add">Add URL to List</button>
         <button class="clear">Clear URLs</button>
-        
+
         <!-- <button onclick="readData()">Read Data from LocalStorage</button> -->
         <!-- <button onclick="writeData()">Write Data to LocalStorage</button> -->
 
