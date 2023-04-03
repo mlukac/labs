@@ -1,0 +1,62 @@
+.block {
+    gap: 8vw;
+    padding-block: 5vw;
+}
+.border-1 {
+    order: -1;
+    width: 40vw;
+    border: 10px solid;
+    padding: 2vw;
+    border-image-source: linear-gradient(45deg, red, blue);
+    border-image-slice: 1;
+}
+.border-2 {
+    width: 40vw;
+    border-block-start: 10px solid;
+    padding-block-start: 2vw;
+    border-image-source: linear-gradient(90deg, green 50%, yellow 50%);
+    border-image-slice: 1;
+}
+.border-3 {
+    width: 40vw;
+    border-inline-start: 10px solid;
+    padding-inline-start: 2vw;
+    border-image-source: linear-gradient(0deg, red, blue);
+    border-image-slice: 1;
+}
+.border-4 {
+    order: -1;
+    width: 40vw;
+    border-inline-start: 10px solid;
+    border-block-start: 10px solid;
+    padding: 2vw;
+    border-image-source:
+        radial-gradient(circle at top left, limegreen, transparent 35%);
+    border-image-slice: 1;
+}
+
+
+.border-5 {
+    --border-width: 10px;
+    order: -1;
+    position: relative;
+
+    width: 40vw;
+    border: var(--border-width) solid;
+    padding: 2vw;
+    border-image-source:
+        radial-gradient(circle at top left, purple, transparent 20%);
+    border-image-slice: 1;
+}
+.border-5:after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: calc( var(--border-width) * -1 );
+
+    border: var(--border-width) solid;
+    padding: 2vw;
+    border-image-source:
+        radial-gradient(circle at bottom right, purple, transparent 20%);
+    border-image-slice: 1;
+}
