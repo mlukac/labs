@@ -83,6 +83,7 @@
             <li><a href="/app/grid3d">grid3d</a></li>
             <li><a href="/app/orbiting-icons">orbiting-icons</a></li>
             <li><a href="/app/borders-1">borders-1</a></li>
+            <li><a href="/app/forms-placeholder">forms-placeholder</a></li>
         </ul>
     </div>
 </div>

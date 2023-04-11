@@ -1,0 +1,43 @@
+.form-name-block {
+    display: flex;
+    gap: 0.625rem;
+}
+.form-group {
+    flex: 1;
+    position: relative;
+}
+.form-group .form-label {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.form-group .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #585DA6;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: none;
+    cursor: pointer;
+
+    background-color: #E8F0F6;
+    border: none;
+    padding: .75rem;
+}
+
+.form-group:not(.has-value) label {
+    display: block;
+    transform: translateX(10px) translateY(37px);
+    transition: .1s all ease;
+    color: #000;
+}
+.form-group:focus-within label {
+    transform: none;
+}
