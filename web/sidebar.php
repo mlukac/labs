@@ -84,6 +84,8 @@
             <li><a href="/app/orbiting-icons">orbiting-icons</a></li>
             <li><a href="/app/borders-1">borders-1</a></li>
             <li><a href="/app/forms-placeholder">forms-placeholder</a></li>
+            <li><a href="/app/tabs-1">tabs-1</a></li>
+            <li><a href="/app/tabs-2">tabs-2</a></li>
         </ul>
     </div>
 </div>

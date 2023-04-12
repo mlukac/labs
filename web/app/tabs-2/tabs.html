@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../main.css" />
+        <script type="module" src="../../main.js"></script>
+
+        <link rel="stylesheet" href="page.css" />
+        <!-- <script type="module" src="page.js"></script> -->
+    </head>
+    <body>
+        <div id="page">
+
+            <div id="block-1" class="block">
+                <div class="tabs-wrapper">
+                    <div class="tabs">
+                        <input type="radio" name="tabs" id="tabone" checked="checked">
+                        <label for="tabone">First Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681296746029/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="tabs" id="tabtwo">
+                        <label for="tabtwo">Second Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681297503007/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="tabs" id="tabthree">
+                        <label for="tabthree">Third Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681297536526/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+
+
+
+
+                    (function() {
+                        const wrapper = document.querySelector('.tabs');
+                        // const text = document.querySelector('.ngtoggle-text');
+                        const label = document.querySelector('label');
+                        // const buttonText = document.querySelector('.ngtoggle-buttontext');
+
+                        document.querySelectorAll("label").forEach(label => {
+                            // label.style.display = "none"
+                            label.addEventListener('click', toggleText);
+                        });
+
+
+                        function toggleText(e) {
+                            // e.preventDefault();
+                            // if (text.style.maxHeight) {
+                            //     text.style.maxHeight = null;
+                            //     buttonText.textContent = 'Expand to read more';
+                            //     wrapper.classList.remove('opened');
+                            //     const wrapperPosition = wrapper.getBoundingClientRect().top + window.pageYOffset;
+                            //     window.scrollTo({ top: wrapperPosition - 96, behavior: 'smooth' });
+                            // } else {
+                            //     text.style.maxHeight = text.scrollHeight + 'px';
+                            //     buttonText.textContent = 'Show Less';
+                            //     wrapper.classList.add('opened');
+                            // }
+                            const wrapperPosition = wrapper.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({ top: wrapperPosition, behavior: 'smooth' });
+                        }
+                        // button.addEventListener('click', toggleText);
+                        // let previousWidth = window.innerWidth;
+                        // window.addEventListener('resize', function() {
+                        //     const currentWidth = window.innerWidth;
+                        //     if (currentWidth !== previousWidth) {
+                        //         text.style.maxHeight = null;
+                        //         buttonText.textContent = 'Expand to read more';
+                        //         wrapper.classList.remove('opened');
+
+                        //         previousWidth = currentWidth;
+                        //     }
+                        // });
+                    })();
+                </script>
+
+
+                <div class="tabs-wrapper">
+                    <div class="tabs2">
+                        <input type="radio" name="tabs2" id="tabone2" checked="checked">
+                        <label for="tabone2">First Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681296746029/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="tabs2" id="tabtwo2">
+                        <label for="tabtwo2">Second Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681297503007/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="tabs2" id="tabthree2">
+                        <label for="tabthree2">Third Tab</label>
+                        <div class="tab">
+                            <img src="https://picsum.photos/seed/1681297536526/1024/640" />
+                            <div class="wrap">
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </body>
+</html>
+
