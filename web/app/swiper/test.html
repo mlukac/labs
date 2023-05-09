@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html {
+    scroll-behavior: smooth;
+  }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+    }
+
+    .swiper-slide {
+      scroll-snap-stop: always;
+    }
+    .swiper-slide-transform {
+      text-align: center;
+      font-size: 18px;
+      background: rgba(0, 255, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .swiper-slide:nth-child(even) .swiper-slide-transform {
+        background: rgba(0, 0, 255);
+    }
+    .long {
+        /* height: 3000px; */
+        width: 400px;
+        margin: 0 auto;
+    }
+    .last {
+      /* height: 3000px!important; */
+      /* overflow: scroll; */
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-v {
+      background: #eee;
+    }
+
+    .mySwiper2 .swiper-pagination {
+        right: 100px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+
+  <div class="swiper mySwiper swiper-v">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="swiper-slide-transform">PARENT Slide 1</div></div>
+      <div class="swiper-slide"><div class="swiper-slide-transform">
+        <div class="swiper mySwiper2 swiper-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="swiper-slide-transform">Child Slide 1</div></div>
+            <div class="swiper-slide"><div class="swiper-slide-transform">Child Slide 2</div></div>
+            <div class="swiper-slide"><div class="swiper-slide-transform">Child Slide 3</div></div>
+            <div class="swiper-slide"><div class="swiper-slide-transform">Child Slide 4</div></div>
+            <div class="swiper-slide"><div class="swiper-slide-transform">Child Slide 5</div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      </div>
+      <div class="swiper-slide"><div class="swiper-slide-transform">PARENT Slide 3</div></div>
+      <div class="swiper-slide"><div class="swiper-slide-transform last">PARENT Slide 4</div></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="long">
+
+    <p>
+        In culpa officia cupidatat amet. Pariatur nostrud officia velit quis eu excepteur ea reprehenderit anim irure ex magna aliquip anim. Et officia eiusmod dolor ea cillum dolor aliqua consectetur commodo. Est ullamco cupidatat duis nisi laboris cupidatat laborum nostrud. Culpa cupidatat amet qui amet quis tempor et ad culpa anim. Anim veniam fugiat aute culpa voluptate esse id in. Excepteur reprehenderit occaecat sit cillum elit aliqua irure.
+
+        Commodo qui duis magna mollit nostrud do magna velit nulla et culpa. Commodo eiusmod laborum quis labore laboris laboris cillum. Laboris ipsum cupidatat sint ad irure commodo ex aliqua sit magna laborum anim ut ipsum. Tempor id magna cillum id anim consequat excepteur consequat proident deserunt excepteur. Amet magna officia excepteur voluptate sint aliqua dolore veniam aliquip eu Lorem id fugiat eu sit. Nostrud irure mollit reprehenderit exercitation sunt ipsum nulla consequat anim quis deserunt.
+
+        Incididunt incididunt pariatur et aliqua. Nostrud proident voluptate amet do. Minim aliqua velit irure. Esse qui enim excepteur laborum consectetur qui aute veniam.
+
+        Nisi in ut excepteur est voluptate consequat nostrud laboris cupidatat enim ea qui elit labore. Et nulla culpa enim est fugiat nisi qui esse consectetur veniam culpa amet sit dolore. Officia anim qui ex nostrud commodo quis id deserunt et adipisicing nisi. Tempor excepteur excepteur ex dolore officia elit proident non anim irure nostrud. Aliquip eiusmod qui irure. Enim anim nulla dolor duis ad esse ad cillum id tempor duis excepteur et esse sunt. Velit ut ad occaecat labore do minim mollit adipisicing fugiat deserunt mollit adipisicing anim. Excepteur veniam nulla anim cupidatat amet qui ex mollit.
+
+        Pariatur Lorem deserunt proident cupidatat esse sit cillum aute voluptate laboris nostrud do veniam. Laborum eu elit nostrud excepteur incididunt. Dolore sit nulla velit ullamco magna. Est ad cillum sunt deserunt duis pariatur non. Est incididunt eiusmod deserunt.
+
+        Tempor sit cillum qui voluptate sint laboris fugiat esse ea aute in. Occaecat magna nisi nisi duis veniam tempor. Excepteur reprehenderit ea aute deserunt. Laboris in pariatur voluptate Lorem reprehenderit cupidatat Lorem elit. Commodo proident commodo ad mollit et amet esse qui proident fugiat ullamco qui aute. Quis quis duis voluptate irure culpa. Cupidatat proident sunt cupidatat aute ex. Excepteur adipisicing do officia ullamco deserunt anim.
+
+        Reprehenderit adipisicing adipisicing culpa excepteur est duis et aliquip. Consectetur nostrud reprehenderit incididunt aliquip culpa. Commodo anim sunt est sint veniam in commodo magna aliqua do. Nisi laboris voluptate cillum Lorem culpa culpa. Excepteur culpa non consequat amet quis esse nulla. Exercitation qui sunt veniam et reprehenderit officia.
+
+        Tempor consequat cupidatat esse velit. Ex duis do excepteur ea. Officia fugiat sit fugiat Lorem deserunt ut consequat duis. Esse proident fugiat eiusmod ex nisi velit sit pariatur magna est exercitation dolor nulla nisi deserunt. Nulla adipisicing commodo reprehenderit ex nisi laboris minim do culpa commodo mollit. Dolor velit elit sunt voluptate cupidatat consectetur velit.
+
+        Reprehenderit occaecat officia sit laborum id laborum ex sunt sit culpa eu anim veniam deserunt id. Aute eu elit tempor culpa culpa. Non sint exercitation consectetur esse deserunt. Cillum officia ut deserunt laborum pariatur dolore pariatur minim. Deserunt ullamco velit ea pariatur proident ea aliqua eu veniam ea. Aute ullamco qui do Lorem eiusmod adipisicing ex est fugiat enim elit irure occaecat. Labore aliquip deserunt fugiat occaecat ad dolor sint tempor mollit tempor incididunt cillum Lorem adipisicing. Aliquip culpa excepteur deserunt.
+
+        Laborum nisi fugiat non aliquip pariatur esse enim enim sunt cupidatat magna. Culpa do consequat aliquip id esse ullamco laborum sunt eu Lorem esse. Aliqua eiusmod proident enim ea est est magna sit nostrud magna. Ullamco laboris ad enim sit incididunt ipsum duis nulla culpa proident. Exercitation adipisicing ut veniam est exercitation nisi. Non aliqua reprehenderit non tempor ea magna pariatur exercitation proident adipisicing dolore laboris culpa ea minim.
+    </p>
+
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js" integrity="sha512-h5Vv+n+z0eRnlJoUlWMZ4PLQv4JfaCVtgU9TtRjNYuNltS5QCqi4D4eZn4UkzZZuG2p4VBz3YIlsB7A2NVrbww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+  <!-- Initialize Swiper -->
+  <script>
+
+  // desktop version
+  if (window.matchMedia("(min-width: 768px)").matches) { console.log("desktop-version");
+
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      // longSwipes: false,
+      preventInteractionOnTransition: true,
+      // simulateTouch: false,
+      // touchMoveStopPropagation: true,
+      // touchRatio: 0.3,
+      // virtualTranslate: true,
+      // followFinger: false,
+      cssMode: true,
+      // threshold: 25,
+      // touchRatio: 0.5,
+      mousewheel: {
+        releaseOnEdges: true,
+        // sensitivity: 1,
+        // thresholdDelta: 25,
+        // thresholdTime: 1000,
+      },
+      //   shortSwipes: false,
+      touchReleaseOnEdges: true,
+      edgeSwipeDetection: true,
+      // touchMoveStopPropagation: true,
+      // touchStartForcePreventDefault: true,
+      // touchStartPreventDefault: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // autoHeight: true,
+    });
+    swiper.on('slideChange', function(){
+        console.log("slideChange");
+    });
+    // swiper.on('reachEnd', function(){
+    //     console.log("1 reach to End");
+    // });
+    // swiper.on('slideChangeEnd', function () {
+    //     if (mySwiper.isEnd) {
+    //             console.log("2 end is reached");
+    //         }
+    // });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      direction: "vertical",
+      // longSwipes: false,
+      preventInteractionOnTransition: true,
+      // simulateTouch: false,
+      // touchMoveStopPropagation: true,
+      // touchEventsTarget: "container",
+      // touchRatio: 0.3,
+      // virtualTranslate: true,
+      effect: "fade",
+      cssMode: true,
+      // threshold: 25,
+      // touchRatio: 0.5,
+      mousewheel: {
+        releaseOnEdges: true,
+        // sensitivity: 1,
+        // thresholdDelta: 25,
+        // thresholdTime: 1000,
+      },
+      touchReleaseOnEdges: true,
+    //   shortSwipes: false,
+    //   touchReleaseOnEdges: true,
+      edgeSwipeDetection: true,
+      // touchMoveStopPropagation: true,
+      // touchStartForcePreventDefault: true,
+      // touchStartPreventDefault: true,
+      nested: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    swiper2.on('reachEnd', function(){
+        console.log("1 reach to End");
+    });
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+// mobile version
+if (window.matchMedia("(max-width: 767px)").matches) {  console.log("mobile-version");
+
+          var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            longSwipes: false,
+            touchReleaseOnEdges: true,
+            touchMoveStopPropagation: false,
+            // preventInteractionOnTransition: true,
+            // simulateTouch: false,
+            // touchMoveStopPropagation: true,
+            // touchRatio: 0.3,
+            // virtualTranslate: true,
+            // followFinger: false,
+            // cssMode: true,
+            threshold: 25,
+            // touchRatio: 0.5,
+            //   shortSwipes: false,
+            edgeSwipeDetection: true,
+            // mousewheel: {
+            //     releaseOnEdges: true,
+            //     // sensitivity: 1,
+            //     // thresholdDelta: 25,
+            //     // thresholdTime: 1000,
+            //   },
+            // touchStartPreventDefault: false,
+            // simulateTouch: true,
+            // touchEventsTarget: "container",
+            // enabled: false,
+            // touchMoveStopPropagation: true,
+            // touchStartForcePreventDefault: true,
+            // touchStartPreventDefault: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            autoHeight: true,
+            // touchStartPreventDefault: false,
+            // passiveListeners: false,
+
+            // touchStartPreventDefault: false,
+            // simulateTouch: true,
+          });
+          // swiper.on('reachEnd', function(){
+          //     console.log("1 reach to End");
+          //     if (event.swipeDirection === 'next') {
+          //       // allowTouchMove = false;
+          //       // mySwiper.allowTouchMove = false;
+          //       console.log("test");
+          //     }
+          // });
+
+
+
+          swiper.on('touchEnd', function(event){
+              console.log("touchEnd");
+              if (event.swipeDirection === 'next') {
+                console.log("touchEnd2")
+              }
+
+          });
+
+          swiper.on('fromEdge', function(){
+              console.log("start fromEdge");
+              // alert("fromEdge");
+              // swiper.params.cssMode = true
+          });
+          swiper.on('toEdge', function(){
+              console.log("stop toEdge");
+              // alert("toEdge");
+              // swiper.params.cssMode = true;
+              // swiper.update();
+          });
+
+
+          var swiper2 = new Swiper(".mySwiper2", {
+            direction: "vertical",
+            longSwipes: false,
+            // preventInteractionOnTransition: true,
+            // simulateTouch: false,
+            // touchMoveStopPropagation: true,
+            // touchEventsTarget: "container",
+            // touchRatio: 0.3,
+            // virtualTranslate: true,
+            effect: "fade",
+            // cssMode: true,
+            threshold: 25,
+            // touchRatio: 0.5,
+            touchReleaseOnEdges: true,
+          //   shortSwipes: false,
+          //   touchReleaseOnEdges: true,
+            edgeSwipeDetection: true,
+            // touchMoveStopPropagation: true,
+            // touchStartForcePreventDefault: true,
+            // touchStartPreventDefault: true,
+            nested: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            autoHeight: true,
+          });
+
+          // swiper2.on('reachEnd', function(){
+          //     console.log("1 reach to End");
+          // });
+
+
+          const container = document.querySelector('.last');
+          let initialX, initialY;
+
+          container.addEventListener('touchstart', (e) => {
+            initialX = e.touches[0].clientX;
+            initialY = e.touches[0].clientY;
+          });
+
+          container.addEventListener('touchmove', (e) => {
+            const currentX = e.touches[0].clientX;
+            const currentY = e.touches[0].clientY;
+            const deltaX = currentX - initialX;
+            const deltaY = currentY - initialY;
+
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+              if (deltaX > 0) {
+                console.log('Touch moved right');
+                // alert("Touch moved right");
+              } else {
+                console.log('Touch moved left');
+                // alert("Touch moved left");
+              }
+            } else {
+              if (deltaY > 0) {
+                console.log('Touch moved down');
+                // alert("Touch moved down");
+              } else {
+                console.log('Touch moved up');
+                // alert("Touch moved up");
+                window.scrollBy(0, window.innerHeight);
+              }
+            }
+          });
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
