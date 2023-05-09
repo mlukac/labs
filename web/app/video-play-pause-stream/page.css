@@ -1,12 +1,17 @@
 body {
     margin: 0;
     background-color: lightblue;
-    padding-top: 90vh;
+    padding-top: 50vh;
+}
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .video-container {
     position: relative;
     margin: 50px;
-    max-width: 1600px;
+    max-width: 720px;
 }
 
 .poster {
@@ -16,17 +21,67 @@ body {
     opacity: 0.35;
 }
 
-.video {
+iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
-.open-fullscreen {
+.on-hover {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
 }
+
+
+.vpps-video-play-pause-stream.vpps-fit.vpps-landscape {
+    width: 100%; }
+    .vpps-video-play-pause-stream.vpps-fit.vpps-landscape iframe {
+      aspect-ratio: 16/9;
+      width: 100%;
+      height: 100%; }
+
+  .vpps-video-play-pause-stream.vpps-fit.vpps-portrait {
+    aspect-ratio: 5/7;
+    position: relative;
+    overflow: hidden; }
+    .vpps-video-play-pause-stream.vpps-fit.vpps-portrait iframe {
+      position: absolute;
+      inset: -13.5% 0;
+      width: 100%;
+      height: 127%; }
+
+  .vpps-video-play-pause-stream.vpps-fill {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh; }
+    .vpps-video-play-pause-stream.vpps-fill iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    @media (min-aspect-ratio: 16 / 9) {
+      .vpps-video-play-pause-stream.vpps-fill.vpps-landscape iframe {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw; } }
+    @media (max-aspect-ratio: 16 / 9) {
+      .vpps-video-play-pause-stream.vpps-fill.vpps-landscape iframe {
+        /* width = 100 / (9 / 16) = 177.78 */
+        width: 177.78vh; } }
+    @media (min-aspect-ratio: 9 / 16) {
+      .vpps-video-play-pause-stream.vpps-fill.vpps-portrait iframe {
+        /* height = 100 * (16 / 9) = 177.78 */
+        height: 177.78vw; } }
+    @media (max-aspect-ratio: 9 / 16) {
+      .vpps-video-play-pause-stream.vpps-fill.vpps-portrait iframe {
+        /* width = 100 / (16 / 9) = 56.25 */
+        width: 56.25vh; } }

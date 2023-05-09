@@ -56,6 +56,7 @@
             </li>
             <li><a href="/app/touchadriatic-test">touchadriatic-test</a></li>
             <li><a href="/app/video-play-pause">video-play-pause</a></li>
+            <li><a href="/app/video-play-pause">video-play-pause-stream</a></li>
             <li>
                 <span>vizols</span>
                 <ul>

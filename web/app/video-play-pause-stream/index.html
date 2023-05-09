@@ -5,33 +5,38 @@
         <link rel="stylesheet" href="../../main.css" />
         <script type="module" src="../../main.js"></script>
         <link rel="stylesheet" href="page.css" />
+        <script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
         <script type="module" src="page.js"></script>
     </head>
     <body>
         <div id="page">
 
-            <div class="video-container">
+            <div class="video-container vpps-video-play-pause-stream vpps-fit">
                 <picture>
-                    <source
+                    <!-- <source
                         media="(orientation: landscape)"
-                        srcset="https://res.cloudinary.com/demo/video/upload/w_1920,h_1080,c_fill/so_0/sea_turtle.jpg">
+                        srcset="https://res.cloudinary.com/demo/video/upload/w_1920,h_1080,c_fill/so_0/sea_turtle.jpg"> -->
                     <source
                         media="(orientation: portrait)"
                         srcset="https://res.cloudinary.com/demo/video/upload/w_640,h_1080,c_fill/so_0/sea_turtle.jpg">
-                    <img src="https://picsum.photos/800/800" alt="Image poster" class="poster">
+                    <img src="https://picsum.photos/640/1080" alt="Image poster" class="poster">
                 </picture>
 
-                <video id="myvideo"  preload="none" muted playsinline loop class="video"
-                    onclick="this.paused ? this.play() : this.pause();">
-                    <source class="" src=""
-                        data-src-portrait="https://res.cloudinary.com/demo/video/upload/w_640,h_1080,c_fill/sea_turtle.mp4"
-                        data-src-landscape="https://res.cloudinary.com/demo/video/upload/w_1920,h_1080,c_fill/sea_turtle.mp4"
-                        type="video/mp4">
-                </video>
-                <button class="open-fullscreen" onclick="window.openFullscreen(this)">Fullscreen</button>
+                <iframe
+                    class="vpps-player"
+                    xdata-landscape="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/4f99bb5538f1597e9ad82f25b4476a31/iframe?controls=false&loop=true&muted=true"
+                    data-portrait="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/b9b49273575faede2e4b09f5f41da487/iframe?controls=false&loop=true&muted=true"
+                    src=""
+                    style="border: none"
+                    height="720"
+                    width="1280"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                ></iframe>
+                <a class="on-hover" href="#"></a>
             </div>
 
-            <div class="video-container">
+            <!-- <div class="video-container vpps-video-play-pause-stream vpps-fit">
                 <picture>
                     <source
                         media="(orientation: landscape)"
@@ -42,16 +47,21 @@
                     <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
                 </picture>
 
-                <video preload="none" muted playsinline loop class="video"
-                    onclick="this.paused ? this.play() : this.pause();">
-                    <source class="" src="" width="200px" height="500px"
-                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
-                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
-                        type="video/mp4">
-                </video>
+                <iframe
+                    class="vpps-player"
+                    data-landscape="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/4f99bb5538f1597e9ad82f25b4476a31/iframe?controls=false&loop=true&muted=true"
+                    data-portrait="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/b9b49273575faede2e4b09f5f41da487/iframe?controls=false&loop=true&muted=true"
+                    src=""
+                    style="border: none"
+                    height="720"
+                    width="1280"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                ></iframe>
+                <a class="on-hover" href="#"></a>
             </div>
 
-            <div class="video-container">
+            <div class="video-container vpps-video-play-pause-stream vpps-fit">
                 <picture>
                     <source
                         media="(orientation: landscape)"
@@ -61,16 +71,22 @@
                         srcset="https://i.postimg.cc/jszvNhjJ/image-2.png">
                     <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
                 </picture>
-                <video preload="none" muted playsinline loop class="video"
-                    onclick="this.paused ? this.play() : this.pause();">
-                    <source class="" src="" width="200px" height="500px"
-                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4"
-                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
-                        type="video/mp4">
-                </video>
+
+                <iframe
+                    class="vpps-player"
+                    data-landscape="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/4f99bb5538f1597e9ad82f25b4476a31/iframe?controls=false&loop=true&muted=true"
+                    data-portrait="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/b9b49273575faede2e4b09f5f41da487/iframe?controls=false&loop=true&muted=true"
+                    src=""
+                    style="border: none"
+                    height="720"
+                    width="1280"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                ></iframe>
+                <a class="on-hover" href="#"></a>
             </div>
 
-            <div class="video-container">
+            <div class="video-container vpps-video-play-pause-stream vpps-fit">
                 <picture>
                     <source
                         media="(orientation: landscape)"
@@ -80,14 +96,20 @@
                         srcset="https://i.postimg.cc/sjsmJZBH/image-3.png">
                     <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
                 </picture>
-                <video preload="none" muted playsinline loop class="video"
-                    onclick="this.paused ? this.play() : this.pause();">
-                    <source class="" src="" width="200px" height="500px"
-                        data-src-portrait="https://assets.mixkit.co/videos/preview/mixkit-womans-feet-splashing-in-the-pool-1261-large.mp4"
-                        data-src-landscape="https://res.cloudinary.com/jgl-ltd/video/upload/v1642245033/culture_v12_gyekhcibbb.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
+
+                <iframe
+                    class="vpps-player"
+                    data-landscape="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/4f99bb5538f1597e9ad82f25b4476a31/iframe?controls=false&loop=true&muted=true"
+                    data-portrait="https://customer-eqhp6zvrdju5e3bt.cloudflarestream.com/b9b49273575faede2e4b09f5f41da487/iframe?controls=false&loop=true&muted=true"
+                    src=""
+                    style="border: none"
+                    height="720"
+                    width="1280"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                ></iframe>
+                <a class="on-hover" href="#"></a>
+            </div> -->
 
         </div>
     </body>
