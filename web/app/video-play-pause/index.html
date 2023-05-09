@@ -5,15 +5,11 @@
         <link rel="stylesheet" href="../../main.css" />
         <script type="module" src="../../main.js"></script>
         <link rel="stylesheet" href="page.css" />
-        <!-- <link rel="serviceworker" href="serviceworker.js"> -->
         <script type="module" src="page.js"></script>
-        <!-- <script>
-            navigator.serviceWorker.register('serviceworker.js');
-        </script> -->
     </head>
     <body>
         <div id="page">
-            
+
             <div class="video-container">
                 <picture>
                     <source
@@ -24,7 +20,7 @@
                         srcset="https://res.cloudinary.com/demo/video/upload/w_640,h_1080,c_fill/so_0/sea_turtle.jpg">
                     <img src="https://picsum.photos/800/800" alt="Image poster" class="poster">
                 </picture>
-                    
+
                 <video id="myvideo"  preload="none" muted playsinline loop class="video"
                     onclick="this.paused ? this.play() : this.pause();">
                     <source class="" src=""
@@ -34,7 +30,7 @@
                 </video>
                 <button class="open-fullscreen" onclick="window.openFullscreen(this)">Fullscreen</button>
             </div>
-                
+
             <script>
 
 
@@ -60,7 +56,7 @@
                 // }
 
                 // var box = document.querySelector(".box");
-                
+
                 // box.nextElementSibling;
                 // box.previousElementSibling;
                 // box.parentElement;
@@ -76,7 +72,7 @@
                         srcset="https://i.postimg.cc/bpB6jJMd/image-1.png">
                     <img src="https://picsum.photos/800/800" alt="Image poster" class="poster" width="200px" height="500px">
                 </picture>
-                    
+
                 <video preload="none" muted playsinline loop class="video"
                     onclick="this.paused ? this.play() : this.pause();">
                     <source class="" src="" width="200px" height="500px"
@@ -85,7 +81,7 @@
                         type="video/mp4">
                 </video>
             </div>
-    
+
             <div class="video-container">
                 <picture>
                     <source
@@ -104,7 +100,7 @@
                         type="video/mp4">
                 </video>
             </div>
-    
+
             <div class="video-container">
                 <picture>
                     <source
@@ -126,5 +122,5 @@
 
         </div>
     </body>
-</html>    
+</html>
 
